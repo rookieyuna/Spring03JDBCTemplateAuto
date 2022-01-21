@@ -53,7 +53,7 @@
 		<td colspan="2" align="center">
 			<button type="submit">입력완료</button>
 			<button type="reset">RESET</button>
-			<button type="button" onclick="location.href='./list.do?nowPage=${param.nowPage}';">
+			<button type="button" onclick="location.href='./listT.do?nowPage=${param.nowPage}';">
 				리스트바로가기
 			</button>
 		</td>

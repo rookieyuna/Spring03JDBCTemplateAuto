@@ -68,11 +68,11 @@
                     <div class="col d-flex justify-content-end">
                         <button type="button" class="btn btn-primary" onclick="location.href='./writeT.do';">글쓰기</button>
                         <button type="button" class="btn btn-secondary"
-                        	onclick="location.href='./password.do?idx=${viewRow.idx}&mode=edit&nowPage=${nowPage }';">수정하기</button>
+                        	onclick="location.href='./password.do?idx=${viewRow.idx}&mode=edit&nowPage=${param.nowPage }';">수정하기</button>
                         <button type="button" class="btn btn-success"
-                        	onclick="location.href='./password.do?idx=${viewRow.idx}&mode=delete&nowPage=${nowPage }';">삭제하기</button>
+                        	onclick="location.href='./password.do?idx=${viewRow.idx}&mode=delete&nowPage=${param.nowPage }';">삭제하기</button>
                         <button type="button" class="btn btn-warning" 
-                        	onclick="location.href='./list.do?nowPage=${param.nowPage}';">목록보기</button>
+                        	onclick="location.href='./listT.do?nowPage=${param.nowPage}';">목록보기</button>
                     </div>
                 </div>
             </form>

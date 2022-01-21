@@ -64,7 +64,7 @@
 							<td class="text-center">${row.name }</td>
 							<td class="text-center">${row.postdate }</td>
 							<td class="text-center">${row.hits }</td>
-							<td><i class="bi-pin-angle-fill" style="font-size: 1rem;"></i></td>
+							<td class="text-center"><i class="bi-pin-angle-fill" style="font-size: 1rem;"></i></td>
 							<!-- <td class="text-center">--</td> -->
 						</tr>
 						<!-- 리스트반복끝 -->
