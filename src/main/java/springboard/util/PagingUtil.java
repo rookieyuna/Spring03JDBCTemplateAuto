@@ -25,13 +25,11 @@ public class PagingUtil {
 			//첫번째 페이지 블럭에서는 출력되지 않음
 			//두번째 페이지 블럭부터 출력됨.
 			pagingStr += ""
-				+ "<a href='"+page+"nowPage=1'>"
-				+ "<img src='../images/paging1.gif'></a>";
-			pagingStr += "&nbsp;";
+				+ "<li class='page-item'><a class='page-link' href="+page+"nowPage=1'>"
+				+ "<i class='bi bi-skip-backward-fill'></i></a></li>";
 			pagingStr += ""
-				+ "<a href='"+page+"nowPage="+
-								(intTemp-blockPage)+"'>"
-				+ "<img src='../images/paging2.gif'></a>";
+				+ "<li class='page-item'><a class='page-link' href='"+page+"nowPage="+(intTemp-blockPage)+"'>"
+				+ "<i class='bi bi-skip-start-fill'></i></a></li>";
 		}
 		
 		//페이지표시 제어를 위한 변수
@@ -43,12 +41,11 @@ public class PagingUtil {
 		while(blockCount<=blockPage && intTemp<=totalPage)
 		{
 			if(intTemp==nowPage) {
-				pagingStr += "&nbsp;"+intTemp+"&nbsp;";
+				pagingStr += "<li class='page-item active'><a class='page-link'>"+intTemp+"</a></li>";
 			}
 			else {
-				pagingStr += "&nbsp;<a href='"+page
-					+"nowPage="+intTemp+"'>"+
-					intTemp+"</a>&nbsp;";
+				pagingStr += "<li class='page-item'><a class='page-link' href='"+page
+					+"nowPage="+intTemp+"'>"+intTemp+"</a></li>";
 			}
 			intTemp++;
 			blockCount++;
@@ -56,15 +53,12 @@ public class PagingUtil {
 		
 		//5.다음페이지블럭 & 마지막페이지 바로가기
 		if(intTemp <= totalPage) {
-			pagingStr += "<a href='"+page+"nowPage="+
-											intTemp+"'>"
-				+ "<img src='../images/paging3.gif'></a>";
-			pagingStr += "&nbsp;";
-			pagingStr += "<a href='"+page+"nowPage="+
-											totalPage+"'>"
-				+ "<img src='../images/paging4.gif'></a>";
+			pagingStr += "<li class='page-item'><a class='page-link' href='"+page+"nowPage="+intTemp+"'>"
+				+ "<i class='bi bi-skip-end-fill'></i></a></li>";
+			pagingStr += "<li class='page-item'><a class='page-link' href='"+page+"nowPage="+totalPage+"'>"
+				+ "<i class='bi bi-skip-forward-fill'></i></a></li>";
 		}		
-				
+		
 		return pagingStr;
 	}
 }

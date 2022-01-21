@@ -13,8 +13,17 @@ public class SpringBbsDTO {
     private String pass;
     //가상번호 부여를 위한 멤버변수 추가
     private int virtualNum;
+    //상세보기 처리를 위한 멤버변수 추가
+    private String nowPage;
     
+   
     
+	public String getNowPage() {
+		return nowPage;
+	}
+	public void setNowPage(String nowPage) {
+		this.nowPage = nowPage;
+	}
 	public int getIdx() {
 		return idx;
 	}

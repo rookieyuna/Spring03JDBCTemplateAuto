@@ -11,7 +11,7 @@
 	
 	<h2>Spring-JDBC 이용한 게시판 제작</h2>
 	<li>
-		<a href="board/list.do" target="_blank">
+		<a href="board/listT.do" target="_blank">
 			JdbcTemplate 게시판 바로가기
 		</a>
 	</li>
